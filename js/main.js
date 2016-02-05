@@ -32,7 +32,7 @@ $(function() {
         animation: 'fade'
     });
     $('#sliderDiv').fadeTo(5000, 1);
-    $('.unslider').fadeTo(5000, 0.7);
+    $('.unslider').fadeTo(5000, 1);
 //    $('#down-arrow').click(function(){            
 //        $(this).fadeToggle();
 //    });

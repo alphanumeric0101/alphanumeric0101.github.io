@@ -2,40 +2,39 @@ body {
     height: 100vh;
     position: relative;  
     overflow: hidden;
+    font-family: raleway;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+    transition: opacity 0.5s ease;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover:not(#projMedia) {
+    opacity: 0.5;
 }
 
 /*///////////////*/
-/* Page Header   */
+                                    /* Page Header   */
 /*///////////////*/
 
 .header-bg {
     position: fixed;
-    height: 100%;
+    height: 15vh;
     width: 100%;
-    top: 0;
     z-index: 0;
-    background-image:
-         url(../images/gridbg-resize-top.jpg);
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100% 30%;
-}
-
-
-.topped {
-    height: 80px;
-    position: fixed;
-    z-index: 2;
-    top: 0;
+    background:
+         url(../images/gridbg-resize-top.jpg) no-repeat center;
+    background-size: cover;
 }
 
 /*///////////////*/
-/*    Nav Bar    */
+                                    /*    Nav Bar    */
 /*///////////////*/
 
 .flex-parent {
@@ -48,15 +47,9 @@ a {
     align-content: center;
     align-items: center;
     top: 15vh;
-    height: 12%;
+    height: 12vh;
     width: 100%;
     background-color: black;
-}
-
-.top-out {
-    position: fixed;
-    top: 40px;
-    left: 0;
 }
 
 .flex-parent span:not(.signature){
@@ -72,6 +65,7 @@ a {
 
 .flex-parent .signature {
     padding: 0;
+    margin: 0 0.5em 0 0.5em;
     max-width: 100px;
     max-height: 100px;
 }
@@ -82,97 +76,213 @@ a {
 }
 
 /*///////////////*/
-/*    Projects   */
+                                    /*    Projects   */
 /*///////////////*/
 
 .projects { 
     z-index: 1;
     position: relative;
-    top: 27vh;
+    top: 30vh;
     width: 100%;
-    background: url(../images/chefbg-resize.jpg) no-repeat center;
-    background-size: cover;
+    height: 60vh;
     padding-top: 5%;
     overflow: hidden;
+    font-weight: 300;
 }
 
 .projectItems {
     width: 80vw;
-    height: 60vh;
-    background-color: rgba(144, 144, 144, 0.2);
-    border-radius: 0.4%;
-    box-shadow: 3px 3px 4px;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0.75%;
 }
 
 .unslider {
     opacity: 0;
-    height: 65vh;
-    padding-bottom: 1em;
+    height: 100%;
     overflow: hidden;
-}
-
-#sliderDiv {
-    height: 95%;
-    opacity: 0;
 }
 
 .slidesWrapper {
     left: 10%;
+    height: 100%;
 }
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+}
+
+article * {
+    z-index: 2;
+}
+
+#projMedia {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/dispatchr-screen-square.png) no-repeat bottom;
+    background-size: cover;
+    transition: background 0.5s ease;
+}
+
+#projMedia:hover {
+    background: url(../images/dispatchr.png) no-repeat top;
+    background-size: contain;
+}
+
+#projDeets {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+}
+
+.projTitle {
+    letter-spacing: 0.08em;
+    line-height: 1em;
+}
+
+.projTagline {
+    line-height: 1em
+}
+
+.projDesc {
+    line-height: 1.4em;
+}
+
+#demo-code {
+    position: relative;
+    top: 0;
+    font-weight: 700;
+}
+
+/*///////////////*/
+                            /* Nav Arrows etc*/
+/*///////////////*/
 
 .unslider-nav {
-    padding: 6px;
+    position: fixed;
+    top: 96%;
+    left: 45%;
+    min-width: 10%;
+    height: 2vh;
 }
-   
-.nav-icon {
+
+.unslider-nav ol li {
+    border: black solid 2.5px;
+}
+
+.fa-stack-2x {
+    color: black;
+}
+
+.nav-circle {
     color: white;
-    top: 45%;
-    font-size: 2em;
 }
 
-.nav-icon.next {
-    left: 93%;
+.unslider-arrow {
+    position: absolute;
+    padding: 20px;
 }
 
-.nav-icon.prev {
+.icon-prev {
+    padding: 0;
+    top: 60%;
     left: 3%;
 }
 
+.icon-next {
+    padding: 0;
+    top: 60%;
+    max-width: 42px;
+    left: 88%;
+    z-index: 1;
+}
+
 /*///////////////*/
-/* Media Queries */
+                            /* Media Queries */
 /*///////////////*/
 
-@media screen and (max-width: 580px) {
-    .flex-parent {
-        font-size: 1em;
+@media screen and (max-width: 620px) {
+    .header-bg {
+        height: 10vh;
     }
+    .flex-parent {
+        font-size: 0.9em;
+        top: 8vh;
+    }
+    
     .flex-parent .signature {
         max-width: 100px;
     }
+    
     .projects {
-        padding-top: 5%;
+        padding: 0;
+        top: 20vh;
+        height: 75vh;
     }
+    
     .projectItems {
-        font-size: 1em;
-        height: 62vh;
+        font-size: 0.8em;
+        height: 75vh;
+        width: 100%;
     }
-    .nav-icon {
-        top: 88%;
-        font-size: 1.8em;
-        padding: 10px;
+    
+    .slidesWrapper{
+        left: 0;
     }
-    .nav-icon.next {
-        left: 70%;
-        padding: 0.5em;
+    
+    article {
+        flex-direction: column;
     }
-    .nav-icon.prev {
+    
+    #projMedia {
+        background-size: cover;
+        background-position: bottom;
+        margin-bottom: -1em;
+    }
+    
+    .projTitle {
+        line-height: 1em;
+    }
+    
+    #demo-code {
+        top: 0;
+        font-weight: 800;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+    
+    .unslider-nav {
+        padding: 0;
+        height: 4vh;
+        left: 40%;
+        width: 20%;
+        align-content: center;
+    }
+    
+    .icon-next {
+        top: 95%;
+        left: 72%;
+        font-size: 0.9em;
+    }
+    
+    .icon-prev {
+        top: 95%;
+        font-size: 0.6em;
         left: 15%;
-        padding: 0.5em;
     }
 }
 
-@media screen and (min-width: 970px) {
-    .projects {
-        padding-top: 3%;
-}
 
