@@ -22,6 +22,10 @@ a img, a img:visited {
     border: 0;
 }
 
+a, a img:focus {
+    outline: none;
+}
+
 a:hover:not(#projMedia) {
     opacity: 0.5;
 }
