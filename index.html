@@ -22,6 +22,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/onepage-scroll.css">
+    <!--link rel="stylesheet" href="css/unslider-dots.css" -->
     <link rel="stylesheet" href="css/style.css">
 
   <!-- Favicon
@@ -40,9 +41,9 @@
         <div class="flex-parent" id="topNav">
             <a href="twitter.com/enz0_matrix" target="_blank"><span class="fa fa-twitter fa-1x"></span></a>
             <a href="http://github.com/alphanumeric0101"><span class="fa fa-git-square fa-1x"></span></a>
-            <span class="signature" id="logo">
+            <a class="signature modal_open" id="logo" href="#modal">
                     <img src="images/name-logo.png" class="name-logo"/>
-            </span>
+            </a>
             <a href="mailto:hello@alexfolk.com?subject=Nice%20site!"><span class="fa fa-envelope fa-1x"></span></a>
             <a href="http://linkedin.com/in/alexfolk"><span class="fa fa-linkedin fa-1x"></span></a>
             <!--            <a href="http://mainframemusings.wordpress.com"><span class="fa fa-wordpress fa-3x"></span></a>-->
@@ -127,6 +128,25 @@
                     </li>
                 </ul>
         </div>
+    
+    <div id="modal">
+        <div class="about-wrapper">
+            <div class="about">
+                <div class="about-media"></div>
+                <div class="about-info">
+                        <p>Hi! I'm Alex. 
+                        <p>An aspiring <strong>Web Developer.</strong></p>
+                        <p>This site is where I'll post my projects, curent and complete (ha).</p>
+                        <hr />
+                        <p>Looking to hire a marvelous <em>intern!?</em></p>
+                        <p><a href="images/af-resume.png" download="af-resume.png">Download</a> my resume or <strong><a href="mailto:hello@alexfolk.com">E-mail me</a></strong></p>
+                        <p>Thanks for visiting :)</p>
+                    <span class="modal_close fa fa-undo" id="close-btn"></span>
+                </div>
+            
+            </div>
+        </div>
+    </div>
             
 
 <!-- End Document
@@ -137,5 +157,6 @@
     
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/jquery.onepage-scroll.min.js"></script>
+    <script src="js/jquery.popupoverlay.js"></script>
     <script src="js/main.js"></script>
 </html>

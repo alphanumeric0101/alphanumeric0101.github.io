@@ -1,7 +1,7 @@
 $(function() {
-    $('.fa', '.flex-parent').fadeTo(5000, 1);
-    $('#sliderDiv').fadeTo(5000, 1);
-    $(".main").onepage_scroll({
+    $('.fa', '.flex-parent').fadeTo(3000, 1);
+    $('.main').fadeTo(3000, 1);
+    $('.main').onepage_scroll({
    sectionContainer: "li",     // sectionContainer accepts any kind of selector in case you don't want to use section
    easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                                     // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
@@ -17,4 +17,8 @@ $(function() {
                                     // the browser's width is less than 600, the fallback will kick in.
    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
+    $('#modal').popup({
+        focusdelay: 1000,
+        outline: true
+    });
 });
