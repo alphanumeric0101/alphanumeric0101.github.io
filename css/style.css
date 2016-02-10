@@ -269,6 +269,10 @@ article * {
         margin-bottom: -1em;
     }
     
+    #projDeets {
+        text-align: center;
+    }
+    
     .projTitle {
         line-height: 1em;
     }
