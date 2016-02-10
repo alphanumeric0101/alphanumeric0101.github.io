@@ -29,7 +29,8 @@ window.onscroll = function(e) {
 $(function() {
     $('.fa', '.flex-parent').fadeTo(5000, 1);
     $('.my-slider').unslider({
-        animation: 'fade'
+        animation: 'vertical',
+        arrows: false
     });
     $('#sliderDiv').fadeTo(5000, 1);
     $('.unslider').fadeTo(5000, 1);
