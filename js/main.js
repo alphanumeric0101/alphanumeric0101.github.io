@@ -1,61 +1,20 @@
-var topNav = document.getElementById('topNav'),
-    header = document.getElementById('header-bg'),
-  stop = topNav.offsetTop - 30,
-  docBody = document.documentElement || document.body.parentNode || document.body,
-  hasOffset = window.pageYOffset !== undefined,
-  scrollTop;
-
-window.onresize = function(e) {
-    
-var topNav = document.getElementById('topNav'),
-  stop = topNav.offsetTop - 30,
-  docBody = document.documentElement || document.body.parentNode || document.body,
-  hasOffset = window.pageYOffset !== undefined,
-  scrollTop;
-}
-
-window.onscroll = function(e) {
-
-  scrollTop = hasOffset ? window.pageYOffset : docBody.scrollTop;
-  if (scrollTop >= stop) {
-    topNav.className = 'flex-parent top-out';
-      header.className = 'header-bg topped';
-  } else {
-    topNav.className = 'flex-parent';
-      header.className = 'header-bg';
-  }
-}
-
 $(function() {
     $('.fa', '.flex-parent').fadeTo(5000, 1);
-    $('.my-slider').unslider({
-        animation: 'fade',
-        arrows: true
-    });
     $('#sliderDiv').fadeTo(5000, 1);
-    $('.unslider').fadeTo(5000, 1);
-//    $('#down-arrow').click(function(){            
-//        $(this).fadeToggle();
-//    });
+    $(".main").onepage_scroll({
+   sectionContainer: "li",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                    // the browser's width is less than 600, the fallback will kick in.
+   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 });
-
-$(function() {
-  // This will select everything with the class smoothScroll
-  // This should prevent problems with carousel, scrollspy, etc...
-  $('.smoothScroll').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000); // The number here represents the speed of the scroll in milliseconds
-        return false;
-      }
-    }
-  });
 });
-
-// Change the speed to whatever you want
-// Personally i think 1000 is too much
-// Try 800 or below, it seems not too much but it will make a difference
