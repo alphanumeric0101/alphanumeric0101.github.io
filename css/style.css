@@ -25,7 +25,7 @@ a:hover:not(#projMedia) {
 
 .header-bg {
     position: fixed;
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     z-index: 0;
     background:
@@ -46,7 +46,7 @@ a:hover:not(#projMedia) {
     justify-content: center;
     align-content: center;
     align-items: center;
-    top: 15vh;
+    top: 12vh;
     height: 12vh;
     width: 100%;
     background-color: black;
@@ -59,7 +59,7 @@ a:hover:not(#projMedia) {
     flex-basis: 0;
     text-align: center;
     margin: 2vw;
-    font-size: 3em;
+    font-size: 2.5em;
     opacity: 0;
 }
 
@@ -82,7 +82,7 @@ a:hover:not(#projMedia) {
 .projects { 
     z-index: 1;
     position: relative;
-    top: 30vh;
+    top: 28vh;
     width: 100%;
     height: 60vh;
     padding-top: 5%;
@@ -131,12 +131,15 @@ article * {
     width: 100%;
     background: url(../images/dispatchr-screen-square.png) no-repeat bottom;
     background-size: cover;
-    transition: background 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 #projMedia:hover {
-    background: url(../images/dispatchr.png) no-repeat top;
-    background-size: contain;
+    opacity: 0.75;
+}
+
+#projDeets p+p{
+/*    margin-top: -0.5em;*/
 }
 
 #projDeets {
@@ -144,26 +147,38 @@ article * {
     flex-shrink: 0;
     flex-basis: 0;
     width: 100%;
-    padding: 1em;
-    text-align: center;
+    padding: 2em;
+    text-align: right;
+}
+
+.project-logo {
+    position: relative;
+    top: 5px;
+    left: 10px;
+    max-width: 40px;
+    display: inline;
 }
 
 .projTitle {
+    display: inline;
     letter-spacing: 0.08em;
-    line-height: 1em;
+}
+
+#first-break {
+    margin-top: 10px;
 }
 
 .projTagline {
-    line-height: 1em
+    line-height: 1em;
 }
 
 .projDesc {
-    line-height: 1.4em;
+    line-height: 1.5em;
 }
 
 #demo-code {
     position: relative;
-    top: 0;
+    top: 5px;
     font-weight: 700;
 }
 
@@ -175,12 +190,7 @@ article * {
     position: fixed;
     top: 96%;
     left: 45%;
-    min-width: 10%;
-    height: 2vh;
-}
-
-.unslider-nav ol li {
-    border: black solid 2.5px;
+    height: 5vh;
 }
 
 .fa-stack-2x {
@@ -213,6 +223,12 @@ article * {
 /*///////////////*/
                             /* Media Queries */
 /*///////////////*/
+
+@media screen and (min-width: 1200px) {
+    .icon-next {
+        left: 92%;
+    }
+}
 
 @media screen and (max-width: 620px) {
     .header-bg {
