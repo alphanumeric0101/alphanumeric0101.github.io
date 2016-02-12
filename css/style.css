@@ -22,11 +22,11 @@ a img, a img:visited {
     border: 0;
 }
 
-a, a img:focus {
+a img:focus {
     outline: none;
 }
 
-a:hover:not(#projMedia) {
+a:hover:not(#projMedia):not(#logo) {
     opacity: 0.5;
 }
 
@@ -34,7 +34,7 @@ a:hover:not(#projMedia) {
                                     /* Page Header   */
 /*///////////////*/
 
-.header-bg {
+.headerBg {
     position: fixed;
     height: 12vh;
     width: 100%;
@@ -48,7 +48,7 @@ a:hover:not(#projMedia) {
                                     /*    Nav Bar    */
 /*///////////////*/
 
-.flex-parent {
+.flexParent {
     position: absolute;
     z-index: 2;
     display: flex;
@@ -63,7 +63,7 @@ a:hover:not(#projMedia) {
     background-color: black;
 }
 
-.flex-parent span:not(.signature){
+.flexParent span:not(.signature){
     color: white;
     flex-grow: 0;
     flex-shrink: 0;
@@ -74,21 +74,34 @@ a:hover:not(#projMedia) {
     opacity: 0;
 }
 
-.flex-parent .signature {
+.flexParent .signature {
     padding: 0;
     margin: 0 0.5em 0 0.5em;
     max-width: 100px;
     max-height: 100px;
 }
 
-.flex-parent img {
+.flexParent img {
     width: 100%;
     height: 100%;
+}
+
+#top-nav img{
+    border-radius: 50%;
+    transition: box-shadow 0.5s ease;
+}
+
+#top-nav img:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
 }
 
 /*///////////////*/
                                     /*    Projects   */
 /*///////////////*/
+
+.main {
+    opacity: 1;
+}
 
 .projects { 
     z-index: 0;
@@ -101,7 +114,6 @@ a:hover:not(#projMedia) {
     font-weight: 400;
     font-size: 1.2em;
 }
-
 
 article {
     display: flex;
@@ -118,7 +130,7 @@ article * {
     z-index: 2;
 }
 
-#projMedia {
+#projMedia-dispatchr {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
@@ -129,11 +141,33 @@ article * {
     transition: opacity 0.5s ease;
 }
 
+#projMedia-myFace {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    height: 60%;
+    width: 100%;
+    background: url(../images/myFace-blue-key.png) no-repeat center;
+    background-size: contain;
+    transition: opacity 0.5s ease;
+}
+
+#projMedia-dreamteam {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/dreamteam-screen.png) no-repeat center;
+    background-size: contain;
+    transition: opacity 0.5s ease;
+}
+
 #projMedia:hover {
     opacity: 0.75;
 }
 
-#projDeets {
+#proj-details {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
@@ -142,7 +176,7 @@ article * {
     text-align: right;
 }
 
-.project-logo {
+.projectLogo {
     position: relative;
     top: 5px;
     left: 10px;
@@ -183,7 +217,7 @@ article * {
     cursor: pointer;
 }
 
-.about-wrapper {
+.aboutWrapper {
     width: 80vw;
     height: 60vh;
     background-color: white;
@@ -199,7 +233,7 @@ article * {
     height: 100%;
 }
 
-.about-media {
+.aboutMedia {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
@@ -209,7 +243,7 @@ article * {
     background-size: contain;
 }
 
-.about-info {
+.aboutInfo {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
@@ -221,8 +255,7 @@ article * {
 #close-btn {
     font-size: 2em;
     width: 50px;
-    position: relative;
-    
+    position: relative;    
     cursor: pointer;
     padding: 30px 10px 0 10px;
 }
@@ -241,15 +274,15 @@ article * {
 }
 
 @media screen and (max-width: 700px) {
-    .header-bg {
+    .headerBg {
         height: 8vh;
     }
-    .flex-parent {
+    .flexParent {
         font-size: 0.9em;
         top: 8vh;
     }
     
-    .flex-parent .signature {
+    .flexParent .signature {
         max-width: 100px;
     }
     
@@ -272,7 +305,7 @@ article * {
         margin-bottom: -1em;
     }
     
-    #projDeets {
+    #proj-details {
         text-align: center;
         padding: 2em 4em 0 4em;
     }
@@ -297,11 +330,11 @@ article * {
         overflow: hidden;
     }
     
-    .about-info {
+    .aboutInfo {
         text-align: center;
     }
     
-    .about-wrapper {
+    .aboutWrapper {
         width: 100vw;
         height: 100vh;
     }

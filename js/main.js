@@ -1,5 +1,5 @@
 $(function() {
-    $('.fa', '.flex-parent').fadeTo(3000, 1);
+    $('.fa', '.flexParent').fadeTo(3000, 1);
     $('.main').fadeTo(3000, 1);
     $('.main').onepage_scroll({
    sectionContainer: "li",     // sectionContainer accepts any kind of selector in case you don't want to use section
