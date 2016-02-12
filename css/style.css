@@ -22,7 +22,7 @@ a img, a img:visited {
     border: 0;
 }
 
-a img:focus {
+a, a img:focus {
     outline: none;
 }
 
