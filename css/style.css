@@ -72,6 +72,11 @@ a:hover:not(#projMedia):not(#logo) {
     margin: 2vw;
     font-size: 2.5em;
     opacity: 0;
+    min-width: 50px;
+}
+
+.flexParent a {
+	min-width: 50px;
 }
 
 .flexParent .signature {
