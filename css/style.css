@@ -146,6 +146,17 @@ article * {
     transition: opacity 0.5s ease;
 }
 
+#projMedia-pomodoit {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/pomodo-it-square.png) no-repeat center;
+    background-size: contain;
+    transition: opacity 0.5s ease;
+}
+
 #projMedia-myFace {
     flex-grow: 1;
     flex-shrink: 0;
