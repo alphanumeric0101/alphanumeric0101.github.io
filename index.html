@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>AF: Web Developer</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Alex Folk: Full Stack Javasctipt Web Developer Portfolio Page">
+  <meta name="author" content="Alex Folk alphanumeric0101">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -27,153 +28,176 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-
 </head>
     
 <body>
     
-  <!-- Primary Page Layout
+  <!-- Page Header + Nav
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="headerBg">
-    </div>
+    <header></header>
     
-        <div class="flexParent" id="top-nav">
-            <a href="http://twitter.com/enz0_matrix" target="_blank"><span class="fa fa-twitter fa-1x"></span></a>
-            <a href="http://github.com/alphanumeric0101"><span class="fa fa-git-square fa-1x"></span></a>
-            <a class="signature modal_open" id="logo" href="#modal">
-                    <img src="images/name-logo.png" class="name-logo"/>
-            </a>
-            <a href="mailto:hello@alexfolk.com?subject=Nice%20site!"><span class="fa fa-envelope fa-1x"></span></a>
-            <a href="http://linkedin.com/in/alexfolk"><span class="fa fa-linkedin fa-1x"></span></a>
-            <!--            <a href="http://mainframemusings.wordpress.com"><span class="fa fa-wordpress fa-3x"></span></a>-->
-        </div>
-    
-        <div class="projects">    
-                <ul class="main">
-                    <li class="projectItems">
+    <nav>
+        <a href="http://twitter.com/enz0_matrix" target="_blank"><span class="fa fa-twitter fa-1x"></span></a>
+        <a href="http://github.com/alphanumeric0101"><span class="fa fa-git-square fa-1x"></span></a>
+        <a class="signature modal_open" id="logo" href="#modal">
+                <img src="images/name-logo.png" class="name-logo"/>
+        </a>
+        <a href="mailto:hello@alexfolk.com?subject=Nice%20site!"><span class="fa fa-envelope fa-1x"></span></a>
+        <a href="http://linkedin.com/in/alexfolk"><span class="fa fa-linkedin fa-1x"></span></a>
+    <!--
+        <a href="http://mainframemusings.wordpress.com"><span class="fa fa-wordpress fa-3x"></span></a>
+            -->
+    </nav>
+
+  <!-- Projects Section, each <li> is a paginated item 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <main>
+        <ul class="scroll">
+            <li class="projectItems">
+                
+                <article id="dispatchr">
+                    <a href="http://dispatch-react.github.io/demo" target="_blank" class="projMedia">
+                    </a>
+                    <section class="projDetails">
+                    
+                        <h1 class="projTitle">Dispatchr<img src="images/dispatchr.png" class="projectLogo"></h1>
+
+                        <hr />
+
+                        <p class="projTagline">Real time, location based job board</p>
+                        <p class="projDesc">A <strong>React.js</strong> app relying heavily on the <strong>GoogleMaps API</strong> built on top of <strong>Parse</strong></p>
+
+                        <hr />
                         
-                        <article id="dispatchr">
-                            <a href="http://dispatch-react.github.io/demo" target="_blank" id="projMedia-dispatchr">
-                            </a>
-                            <section id="proj-details">
-                            
-                                <h1 class="projTitle">Dispatchr<img src="images/dispatchr.png" class="projectLogo"></h1>
-                                <hr id="first-break"/>
-                                <p class="projTagline">Real time, location based job board</p>
-                                <p class="projDesc">A <strong>React.js</strong> app relying heavily on the <strong>GoogleMaps API</strong> built on top of <strong>Parse</strong></p>
-                                <hr />
-                                
-                                <section id="demo-code">
-                                    <a href="http://dispatch-react.github.io/demo" target="_blank" class="btn-demo">Demo</a>
-                                    <span>|</span>
-                                    <a href="https://github.com/dispatch-react/dispatchr" class="btn-code">Code</a>
-                                </section>
-                                
-                            </section>  
-                            
-                        </article>
+                        <section class="demoCode">
+                            <a href="http://dispatch-react.github.io/demo" target="_blank" class="btn-demo">Demo</a>
+                            <span>|</span>
+                            <a href="https://github.com/dispatch-react/dispatchr" class="btn-code">Code</a>
+                        </section>
                         
-                    </li>
-                    <li class="projectItems">
+                    </section>  
+                    
+                </article>
+                
+            </li>
+            <li class="projectItems">
+                
+                <article id="pomodoit">
+                    <a href="http://pomodoit.cloudno.de/" target="_blank" class="projMedia">
+                    </a>
+                    <section class="projDetails">
+                    
+                        <h1 class="projTitle">PomoDo-It<img src="images/pomo-log.png" class="projectLogo"></h1>
+
+                        <hr />
                         
-                        <article id="pomodoit">
-                            <a href="http://pomodoit.cloudno.de/" target="_blank" id="projMedia-pomodoit">
-                            </a>
-                            <section id="proj-details">
-                            
-                                <h1 class="projTitle">PomoDo-It<img src="images/pomo-log.png" class="projectLogo"></h1>
-                                <hr id="first-break"/>
-                                <p class="projTagline">Productivity App</p>
-                                <p class="projDesc">A <strong>MongoDB + CloudNode</strong> powered app featuring the lovely <strong>Material-UI</strong> css framework for <strong>React.js</strong></p>
-                                <hr />
-                                
-                                <section id="demo-code">
-                                    <a href="http://pomodoit.cloudno.de" target="_blank" class="btn-demo">Demo</a>
-                                    <span>|</span>
-                                    <a href="https://github.com/alphanumeric0101/pomodo-it" class="btn-code">Code</a>
-                                </section>
-                                
-                            </section>  
-                            
-                        </article>
+                        <p class="projTagline">Productivity App</p>
+                        <p class="projDesc">A <strong>MongoDB + CloudNode</strong> powered app featuring the lovely <strong>Material-UI</strong> css framework for <strong>React.js</strong></p>
+
+                        <hr />
                         
-                    </li>
-                    <li class="projectItems">
+                        <section class="demoCode">
+                            <a href="http://pomodoit.cloudno.de" target="_blank" class="btn-demo">Demo</a>
+                            <span>|</span>
+                            <a href="https://github.com/alphanumeric0101/pomodo-it" class="btn-code">Code</a>
+                        </section>
                         
-                        <article id="myFace">
-                            <a id="projMedia-myFace">
-                            </a>
-                            <section id="proj-details">
-                            
-                                <h1 class="projTitle">MyFace <img src="images/my-Face-blu-icon.png" class="projectLogo" /></h1>
-                                <hr id="first-break"/>
-                                <p class="projTagline">Posts, events and files, oh my!</p>
-                                <p class="projDesc">A <strong>React + Meteor</strong> social networking app built over <strong>MongoDB</strong> with a projected emphasis on <strong>privacy</strong></p>
-                                <hr />
+                    </section>  
+                    
+                </article>
+                
+            </li>
+            <li class="projectItems">
+                
+                <article id="myFace">
+                    <a class="projMedia">
+                    </a>
+                    <section class="projDetails">
+                    
+                        <h1 class="projTitle">MyFace <img src="images/my-Face-blu-icon.png" class="projectLogo" /></h1>
+
+                        <hr />
                         
-                                
-                                <section id="demo-code">
-                                    <p>Under active development</p>
-                                </section>
-                                
-                            </section>  
-                            
-                        </article>
+                        <p class="projTagline">Posts, events and files, oh my!</p>
+                        <p class="projDesc">A <strong>React + Meteor</strong> social networking app built over <strong>MongoDB</strong> with a projected emphasis on <strong>privacy</strong></p>
                         
-                    </li>
-                    <li class="projectItems">
+                        <hr />
                         
-                        <article id="dreamteam">
-                            <a href="http://dreamteam.design" target="_blank" id="projMedia-dreamteam">
-                            </a>
-                            <section id="proj-details">
-                            
-                                <h1 class="projTitle">DreamTeam<img src="images/cloudlogo.png" class="projectLogo"></h1>
-                                <hr id="first-break"/>
-                                <p class="projTagline">Responsive single page site for a fictional design agency</p>
-                                <p class="projDesc">A practice website using <strong>FlexBox</strong> via the <strong>SASS</strong> powered <strong>Bulma.css</strong> framework.</p>
-                                <hr />
-                                
-                                <section id="demo-code">
-                                    <p><a href="http://dreamteam.design" target="_blank">www.dreamteam.design</a></p>
-                                </section>
-                                
-                            </section>  
-                            
-                        </article>
+                        <section class="demoCode">
+                            <p>Under active development</p>
+                        </section>
                         
-                    </li>
-                </ul>
-        </div>
+                    </section>  
+                    
+                </article>
+                
+            </li>
+            <li class="projectItems">
+                
+                <article id="dreamteam">
+                    <a href="http://dreamteam.design" target="_blank" class="projMedia">
+                    </a>
+                    <section class="projDetails">
+                    
+                        <h1 class="projTitle">DreamTeam<img src="images/cloudlogo.png" class="projectLogo"></h1>
+
+                        <hr />
+
+                        <p class="projTagline">Responsive single page site for a fictional design agency</p>
+                        <p class="projDesc">A practice website using <strong>FlexBox</strong> via the <strong>SASS</strong> powered <strong>Bulma.css</strong> framework.</p>
+
+                        <hr />
+                        
+                        <section class="demoCode">
+                            <p><a href="http://dreamteam.design" target="_blank">www.dreamteam.design</a></p>
+                        </section>
+                        
+                    </section>  
+                    
+                </article>
+                
+            </li>
+        </ul>
+    </main>
+
+
+<!--
+        About Me Modal Component
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     
     <div id="modal">
         <div class="aboutWrapper">
-            <div class="about">
-                <div class="aboutMedia"></div>
-                <div class="aboutInfo">
-                        <p>Hi! I'm Alex. 
-                        <p>An full stack <strong>Javascript Developer.</strong></p>
-                        <p>This site is where I'll post my projects, curent and complete (ha).</p>
-                        <hr />
-                        <p>Looking to hire a marvelous <em>intern!?</em></p>
-                        <p><a href="images/af-resume.png" download="af-resume.png">Download</a> my resume or <strong><a href="mailto:hello@alexfolk.com">E-mail me</a></strong></p>
-                        <p>Thanks for visiting :)</p>
-                    <span class="modal_close fa fa-undo" id="close-btn"></span>
-                </div>
-            
+            <div class="aboutMedia"></div>
+            <div class="aboutInfo">
+                <p>Hi! I'm Alex. 
+                <p>An full stack <strong>Javascript Developer.</strong></p>
+                <p>This site is where I'll post my projects, curent and complete (ha).</p>
+
+                <hr />
+
+                <p>Looking to hire a marvelous <em>intern!?</em></p>
+                <p><a href="images/af-resume.png" download="af-resume.png">Download</a> my resume or <strong><a href="mailto:hello@alexfolk.com">E-mail me</a></strong></p>
+                <p>Thanks for visiting :)</p>
+                <span class="modal_close fa fa-undo" id="close-modal"></span>
             </div>
         </div>
     </div>
             
 
-<!-- End Document
+<!-- End Document Body
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
     
 <!-- Scripts -->
-    
-    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="js/jquery.onepage-scroll.min.js"></script>
-    <script src="js/jquery.popupoverlay.js"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.popupoverlay.js"></script>
+    <script type="text/javascript">
+        $('#modal').popup({
+            focusdelay: 1000,
+            outline: true
+          });
+    </script>
+    <script type="text/javascript" src="js/jquery.onepage-scroll.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </html>

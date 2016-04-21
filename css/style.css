@@ -9,6 +9,7 @@ a {
     text-decoration: none;
     color: inherit;
     transition: opacity 0.5s ease;
+    cursor: pointer;
 }
 
 a:visited {
@@ -26,7 +27,7 @@ a, a img:focus {
     outline: none;
 }
 
-a:hover:not(#projMedia):not(#logo) {
+a:hover:not(.projMedia):not(#logo) {
     opacity: 0.5;
 }
 
@@ -34,7 +35,7 @@ a:hover:not(#projMedia):not(#logo) {
                                     /* Page Header   */
 /*///////////////*/
 
-.headerBg {
+header {
     position: fixed;
     height: 12vh;
     width: 100%;
@@ -48,7 +49,7 @@ a:hover:not(#projMedia):not(#logo) {
                                     /*    Nav Bar    */
 /*///////////////*/
 
-.flexParent {
+nav {
     position: absolute;
     z-index: 2;
     display: flex;
@@ -63,7 +64,7 @@ a:hover:not(#projMedia):not(#logo) {
     background-color: black;
 }
 
-.flexParent span:not(.signature){
+nav span:not(.signature){
     color: white;
     flex-grow: 0;
     flex-shrink: 0;
@@ -75,40 +76,33 @@ a:hover:not(#projMedia):not(#logo) {
     min-width: 50px;
 }
 
-.flexParent a {
+nav a {
 	min-width: 50px;
 }
 
-.flexParent .signature {
+nav .signature {
     padding: 0;
     margin: 0 0.5em 0 0.5em;
     max-width: 100px;
     max-height: 100px;
 }
 
-.flexParent img {
+nav img {
     width: 100%;
     height: 100%;
-}
-
-#top-nav img{
     border-radius: 50%;
     transition: box-shadow 0.5s ease;
 }
 
-#top-nav img:hover {
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
+nav img:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
 }
 
 /*///////////////*/
                                     /*    Projects   */
 /*///////////////*/
 
-.main {
-    opacity: 1;
-}
-
-.projects { 
+main { 
     z-index: 0;
     position: relative;
     top: 5vh;
@@ -118,6 +112,7 @@ a:hover:not(#projMedia):not(#logo) {
     overflow: hidden;
     font-weight: 400;
     font-size: 1.2em;
+    opacity: 1;
 }
 
 article {
@@ -131,59 +126,40 @@ article {
     z-index: 2;
 }
 
-article * {
-    z-index: 2;
-}
-
-#projMedia-dispatchr {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0;
-    height: 100%;
-    width: 100%;
-    background: url(../images/dispatchr-screen-square.png) no-repeat center;
-    background-size: contain;
-    transition: opacity 0.5s ease;
-}
-
-#projMedia-pomodoit {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0;
-    height: 100%;
-    width: 100%;
-    background: url(../images/pomodo-it-square.png) no-repeat center;
-    background-size: contain;
-    transition: opacity 0.5s ease;
-}
-
-#projMedia-myFace {
+.projMedia {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
     height: 50%;
     width: 100%;
-    background: url(../images/myFace-blue-key.png) no-repeat center;
-    background-size: contain;
     transition: opacity 0.5s ease;
 }
 
-#projMedia-dreamteam {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0;
-    height: 50%;
-    width: 100%;
-    background: url(../images/dreamteam-screen.png) no-repeat center;
-    background-size: contain;
-    transition: opacity 0.5s ease;
-}
-
-#projMedia:hover {
+.projMedia:hover {
     opacity: 0.75;
 }
 
-#proj-details {
+#dispatchr a.projMedia {
+    background: url(../images/dispatchr-screen-square.png) no-repeat center;
+    background-size: contain;
+}
+
+#pomodoit a.projMedia {
+    background: url(../images/pomodo-it-square.png) no-repeat center;
+    background-size: contain;
+}
+
+#myFace a.projMedia {
+    background: url(../images/myFace-blue-key.png) no-repeat center;
+    background-size: contain;
+}
+
+#dreamteam a.projMedia {
+    background: url(../images/dreamteam-screen.png) no-repeat center;
+    background-size: contain;
+}
+
+.projDetails {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 0;
@@ -205,24 +181,19 @@ article * {
     letter-spacing: 0.08em;
 }
 
-#first-break {
-    margin-top: 10px;
-}
-
 .projTagline {
-    line-height: 1em;
+    line-height: 1.1em;
 }
 
 .projDesc {
     line-height: 1.5em;
 }
 
-#demo-code {
+.demoCode {
     position: relative;
     top: 5px;
-    font-weight: 700;
+    font-weight: 400;
 }
-
 
 /*///////////////*/
                                     /*    About Modal   */
@@ -230,16 +201,12 @@ article * {
 
 #modal a {
     font-weight: 600;
-    cursor: pointer;
 }
 
 .aboutWrapper {
     width: 80vw;
     height: 60vh;
     background-color: white;
-}
-
-.about {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -254,7 +221,7 @@ article * {
     flex-shrink: 0;
     flex-basis: 0;
     width: 100%;
-    height: 80%;
+    height: 45vh;
     background: url(../images/bikebg-smaller.jpg) no-repeat center;
     background-size: contain;
 }
@@ -268,7 +235,7 @@ article * {
     padding: 0 1em 0 1em;
 }
 
-#close-btn {
+#close-modal {
     font-size: 2em;
     width: 50px;
     position: relative;    
@@ -281,7 +248,7 @@ article * {
 /*///////////////*/
 
 @media screen and (min-width: 1200px) {
-    .projects {
+    main {
         top: 2vh;
         font-size: 1.5em;
         width: 90%;
@@ -290,20 +257,20 @@ article * {
 }
 
 @media screen and (max-width: 720px) {
-    .headerBg {
+    header {
         height: 8vh;
     }
-    .flexParent {
+    nav {
         font-size: 0.9em;
         top: 8vh;
     }
     
-    .flexParent .signature {
+    nav .signature {
         max-width: 100px;
     }
     
-    .projects {
-        top: 13%;
+    main {
+        top: 20%;
         padding: 5px 0 5px 0;
         height: 90%;
         width: 100%;
@@ -329,10 +296,12 @@ article * {
         margin-top: 3em;
     }
     
-    
-    #proj-details {
+    .projDetails {
         text-align: center;
-        padding: 2em 4em 0 4em;
+    }
+
+    .projDesc {
+        padding: 0 1em 0 1em;
     }
     
     .projTitle {
@@ -347,13 +316,8 @@ article * {
     }
     
     /*/////////////////////////////////
-                    Modal
+            Modal + Media Queries
     /////////////////////////////////*/
-    
-    .about {
-        flex-direction: column;
-        overflow: hidden;
-    }
     
     .aboutInfo {
         text-align: center;
@@ -362,9 +326,12 @@ article * {
     .aboutWrapper {
         width: 100vw;
         height: 100vh;
+        flex-direction: column;
+        overflow: hidden;
+        padding-top: 1em;
     }
     
-    #close-btn {
+    #close-modal {
         display: block;
         margin: auto;
     }
